@@ -1,18 +1,25 @@
 <?php
-$pass   = "bismillah";
-$mail  = "rhysepti900@gmail.com";
+session_start();
 
-if($_POST['email']!="" and $_POST['password']!=""){
+$pass = "punyasaya";
+$email = "rhysepti900@gmail.com";
 
-    if($_POST['email']==$mail){
-        if($_POST['password']==$pass){
-            echo "Login berhasil";
-        }else{
-            echo "Password yang anda masukan salah!!";
+if (isset($_POST['email']) && isset($_POST['password'])) {
+    if ($_POST['email'] == $email) {
+        if ($_POST['password'] == $pass) {
+            $_SESSION['email'] = $email;
+            header("Location: simpan.php");
+            exit();
+        } else {
+            header("Location: login.php?status=gagal");
+            exit();
         }
-    }else{
-        echo "Email yang anda masukan salah!!";
+    } else {
+        header("Location: login.php?status=gagal");
+        exit();
     }
-}else{
-    echo "Masukan email dan password!!";
+} else {
+    header("Location: login.php?status=gagal");
+    exit();
 }
+?>
