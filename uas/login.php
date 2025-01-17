@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            background: linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0));
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -30,7 +30,7 @@
         .login-container h2 {
             text-align: center;
             margin-bottom: 1rem;
-            color: #4A90E2;
+            color:rgb(0, 0, 0);
         }
 
         .login-container label {
@@ -51,7 +51,7 @@
         }
 
         .login-container button {
-            background-color: #4A90E2;
+            background-color:rgb(0, 0, 0);
             color: white;
             padding: 0.8rem;
             width: 100%;
@@ -63,7 +63,7 @@
         }
 
         .login-container button:hover {
-            background-color: #357ABD;
+            background-color:rgb(0, 0, 0);
         }
 
         .login-container p {
